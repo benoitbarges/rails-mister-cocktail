@@ -1,16 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+
 .banner {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  height: 80vh
+  height: 50vh;
 }
 
 .banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
   font-weight: bold;
+  font-family: Amatic SC;
+  font-size: 100px;
 }
 
 .banner p {
@@ -19,3 +23,34 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+  .banner h1 {
+    font-size: 100px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+  .banner h1 {
+    font-size: 100px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 80px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .banner h1 {
+    font-size: 80px;
+  }
+}
+
+
+
