@@ -1,1 +1,7 @@
 // Specific CSS for your home-page
+h1.catch-phrase {
+  background: linear-gradient(to right, rgb(146, 23, 77) 9.38%, rgb(228, 29, 92) 88.54%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 60px;
+}

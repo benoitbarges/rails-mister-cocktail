@@ -1,16 +1,35 @@
-<h1>Cocktails (<%= Cocktail.count %>)</h1>
+<% default_picture = "https://source.unsplash.com/random/cocktail" %>
 
-<%= link_to "Add a new cocktail", new_cocktail_path %>
+<div class="d-flex justify-content-center align-items-center">
+  <div><h1 class="catch-phrase">There is always a Cocktail for you</h1></div>
+  <div>
+      <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-outline-secondary" %>
+  </div>
+</div>
 
 
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
+      <%
+      if cocktail.picture.attachment
+        picture = cl_image_path cocktail.picture.key
+      else
+        picture = default_picture
+      end
+       %>
       <div class="col-sm-12 col-md-6  col-lg-4">
-        <div class="card-category my-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random/cocktail)">
-          <%= link_to cocktail.name , cocktail_path(cocktail) %>
+        <div class="card my-3">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= picture %>')">
+            <%= link_to cocktail.name , cocktail_path(cocktail) %>
+          </div>
+          <div class="card-text">
+            <p>hello</p>
+          </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
+
